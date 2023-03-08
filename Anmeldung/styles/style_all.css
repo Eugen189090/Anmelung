@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://images5.alphacoders.com/411/411889.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
+/* span {
+  color: red;
+} */
+span {
+  color: #fff;
+  background: linear-gradient(to right, red, green, red );
+  background-size: 200% auto;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  box-shadow: 3px 5px 1px goldenrod;
+  animation: gradient 9s linear infinite;
+}
+
+@keyframes gradient {
+ 0% {background-position: 0% 50%;}
+ 50% {background-position: 51% 99%;}
+ 75% {background-position: 100% 0%;} 
+ 100% {background-position: 0%;}
+}
+
+
+header {
+  background-color: rgba(0, 0, 0, 0);
+  height: auto;
+  margin-top: 0;
+  text-align: center;
+}
+
+.ueberschrift {
+  max-width: 100%;
+  max-height: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25% auto;
+}
+
+h1 {
+  color: #fff;
+  background-color: #2e8b5600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 10% auto 0;
+}
+ 
+/* Container für das Anmeldeformular */
+.container {
+  width: 50%;
+  max-width: 55%;
+  padding: 2%;
+  margin: 25% auto 75% auto;
+  display: flex;
+  justify-content: center; /* Horizontale Zentrierung */
+  align-items: center; /* Vertikale Zentrierung */
+}
+ 
+/* Anmeldeformular-Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+ 
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+ 
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+ 
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #2E8B57;
+}
+ 
+input[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+ 
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  .container {
+  padding: 10px 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  font-size: 0.8rem;
+  }
+}
+ 
+@media screen and (max-width: 400px) {
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  font-size: 0.6rem;
+  }
+}
+
+/* Styling für breitere Bildschirme */
+@media only screen and (min-width: 768px) {
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  #login-form {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+ 
+ /* Styling für schmalere Bildschirme */
+ @media only screen and (max-width: 767px) {
+  form, #login-form {
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #cccccc00;
+  }
+}
+ 
+/* Styling für sehr schmale Bildschirme */
+@media only screen and (max-width: 480px) {
+  form, #login-form {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  h1 {
+    max-width: 97vw;
+    padding: 0% auto;
+    /* margin-top: -10%; */
+  }
+} 

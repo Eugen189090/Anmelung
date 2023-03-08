@@ -1,0 +1,14 @@
+/* CSS für das Anmeldeformular */
+body {
+    height: 100vh;
+}
+
+form {
+    /* margin: 20px; */
+    padding: 20px;
+    background-color: #ffff00d7;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #fff, -1px -1px 5px #fff, 1px 1px 5px #fff, -2px -2px 7px #ffff00d7, 2px 2px 7px #ffff00d7, -3px -3px 10px #ffff00d7, 3px 3px 10px #ffff00d7, 0px 0px 150px #ffff00d7;
+    max-width: 500px;
+    margin: auto;
+}

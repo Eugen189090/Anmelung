@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letzte Seite</title>
+    <link rel="stylesheet" href="styles/style_all.css">
+    <link rel="stylesheet" href="styles/seite4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+</head>
+<body title="index4.html">
+    <header>
+      <div class="ueberschrift">
+        <h1>Seite 4</h1>
+      </div>
+    </header>
+    <div class="container">
+    <!-- HTML-Code für das Anmeldeformular -->
+    <form id="login-form" action="main.html.html">
+      <fieldset>
+         <legend>LOGIN</legend>
+         <label for="username">Benutzer: <span>User</span></label><br>
+         <input type="text" id="username" name="username" placeholder="Benutzername:" class="placeholder-rot" required><br>
+         <label for="password">Passwort: <span>Test1234</span></label><br>
+         <input type="password" id="password" name="password" placeholder="Passwort:" class="placeholder-rot" required><br><br>
+         <input type="submit" value="Anmelden" id="login-button">
+      </fieldset>
+    </form>
+  </div>
+</body>
+<script>
+  // JavaScript-Code für das Anmeldeformular
+
+  const form = document.getElementById('login-form');
+  const button = document.getElementById('login-button');
+  
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+  
+    const username = form.elements.username.value;
+    const password = form.elements.password.value;
+  
+    if (username === 'User' && password === 'Test1234') {
+      button.setAttribute('disabled', true);
+      button.setAttribute('value', 'Anmeldung läuft...');
+  
+      // Hier könntest du eine Anfrage an deinen Server senden, um die
+      // Anmeldeinformationen zu überprüfen und dann den Benutzer anmelden.
+      // Im Beispiel wird der Benutzer einfach nach 2 Sekunden weitergeleitet.
+      
+      setTimeout(() => {
+        //form.submit();
+        window.location.href = 'index.html'
+      }, 2000);
+    } else {
+      alert('Falscher Benutzername oder Passwort!');
+    }
+  });
+</script>
+</html>
